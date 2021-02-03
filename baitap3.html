@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function fobinancy(x){
+       if (Number.isInteger(x)){
+           if (x==0||x==1){
+               return 1
+           }else {
+               return fobinancy(x-2)+fobinancy(x-1)
+           }
+       }return false
+    }
+    function isFibonancy(number){
+        for (let i = 0; i < number; i++) {
+            if (fobinancy(i) === number){
+                return true
+            }
+        }return false
+    }
+    console.log(isFibonancy(13))
+</script>
